@@ -19,7 +19,17 @@ I have developed a Backend application to perform CRUD operations and made Restf
 
 <h2>Features</h2>
 
-* Transfer Money
 * User login and signUp
+* User can make Payments and transactions
 * Built on rest Architecture
+
+<h2>Intallation & Run</h2>
+
+Before running the API server, you should update the database config inside the application.properties file.
+
+Update the port number, username and password as per your local database config. server.port=8886
+
+spring.datasource.url=jdbc:mysql://localhost:3306/Gogreen spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver spring.datasource.username=mysql username spring.datasource.password=YourPassword spring.jpa.hibernate.ddl-auto=update
+
+API Root Endpoint https://localhost:8800/
 
