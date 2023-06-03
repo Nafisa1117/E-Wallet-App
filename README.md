@@ -11,10 +11,15 @@ I have developed a Backend application to perform CRUD operations and made Restf
 * Java
 * Spring Boot
 * Maven
-* Swagger-Ui
+* Swagger-UI
 * Lombok
-* MySql
-* SpringData Jpa
+* MySQL
+* Spring Data Jpa
 * Hibernate
 
+<h2>Features</h2>
+
+* Transfer Money
+* User login and signUp
+* Built on rest Architecture
 
