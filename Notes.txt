@@ -1,0 +1,110 @@
+controller
+exception
+model
+repository
+service
+util
+
+=====
+
+* ER diagram
+
+User--
+userId
+name
+mobileNo
+password
+email
+walletId
+
+wallet---
+walletId
+walletBalance
+user
+bank
+benifeciary
+transaction
+billPayment
+
+Bank---
+accountNumber
+ifscCode
+bankBalance
+bankName
+walletId
+
+benificiary----
+beneficiaryId
+name
+mobileNo
+
+Bill Payment---
+billId
+billType
+amount
+paymentDateTime
+walletId
+
+Transaction---
+transactionId
+transactiontype
+transactionDate
+amount
+description
+walletId
+
+
+=====
+steps to create app:---
+
+To develop a payment wallet application using Spring Boot, you can follow these steps:
+
+Step 1: Set up your development environment
+
+Install Java Development Kit (JDK) if you don't have it already.
+Install an Integrated Development Environment (IDE) such as IntelliJ IDEA or Eclipse.
+Install Maven to manage dependencies in your project.
+Set up Spring Boot by creating a new Spring Boot project using either Spring Initializr or your IDE.
+Step 2: Define your application requirements
+
+Determine the features and functionalities you want to include in your payment wallet application.
+Identify the entities involved, such as users, transactions, and wallets.
+Plan the database schema and design.
+Step 3: Create the database
+
+Choose a database management system like MySQL, PostgreSQL, or H2.
+Set up the database server and create the necessary tables to store user information, transactions, and wallet details.
+Step 4: Create Spring Boot entities
+
+Define the Java classes that will represent your database tables, such as User, Transaction, and Wallet.
+Use annotations like @Entity, @Table, and @Column to map the entities to the corresponding database tables and columns.
+Establish relationships between entities using annotations like @OneToMany, @ManyToOne, etc., depending on your application's requirements.
+Step 5: Implement repositories
+
+Create repository interfaces by extending the JpaRepository interface provided by Spring Data JPA.
+Define custom query methods in the repositories to perform CRUD (Create, Read, Update, Delete) operations on the entities.
+Step 6: Implement services
+
+Create service classes that will handle the business logic of your application.
+Inject the repository interfaces into the service classes using the @Autowired annotation.
+Implement methods in the service classes to perform operations such as user registration, wallet creation, transaction processing, etc.
+Step 7: Implement controllers
+
+Create RESTful API controllers using Spring's @RestController annotation.
+Define request mappings for various endpoints, such as /users, /wallets, and /transactions.
+Use the service classes to process the incoming requests and return appropriate responses.
+Step 8: Implement security measures (optional)
+
+If your payment wallet application requires user authentication and authorization, implement Spring Security to secure your API endpoints.
+Configure authentication providers, such as in-memory authentication, database-based authentication, or external authentication providers like OAuth.
+Step 9: Test your application
+
+Write unit tests for your services and repositories to ensure their functionality.
+Use tools like JUnit and Mockito to mock dependencies and perform assertions.
+Test your API endpoints using tools like Postman or curl.
+Step 10: Run and deploy your application
+
+Run your Spring Boot application using either the command line or your IDE.
+Package your application into an executable JAR file using Maven's mvn package command.
+Deploy your application to a server or cloud platform of your choice, such as Heroku, AWS, or Azure.
+These steps provide a general outline to get started with developing a payment wallet application using Spring Boot. You can customize and expand upon them based on your specific requirements and preferences.
