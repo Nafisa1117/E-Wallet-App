@@ -19,7 +19,7 @@ I have developed a Backend application to perform CRUD operations and made Restf
 <h1>ddd</h1>
 <h2>Features</h2>
 
-* User login and signUp
+* User login and signUp.
 * User can make Payments and transactions
 * Built on rest Architecture
 
